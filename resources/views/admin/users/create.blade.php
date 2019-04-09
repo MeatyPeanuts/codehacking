@@ -21,7 +21,7 @@
 
                 <div class="form-group">
                     {!! Form::label('role_id','Role:') !!}
-                    {!! Form::select('role', [''=>'Choose Options'] + $roles, null, ['class'=>'form-control']) !!}<br>
+                    {!! Form::select('role_id', [''=>'Choose Options'] + $roles, null, ['class'=>'form-control']) !!}<br>
                 </div>
 
                 <div class="form-group">
