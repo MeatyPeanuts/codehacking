@@ -52,8 +52,17 @@
 
                 <div class="form-group">
                     {{--   CAN JUST LEAVE IT AS SUBMIT()   THIS SHOWS HOW TO CUSTOMIZE BUTTON AND ADD CLASS TO IT      --}}
-                    {!! Form::submit('Update User', ['class'=>'btn btn-primary']) !!}
+                    {!! Form::submit('Update User', ['class'=>'btn btn-primary col-sm-6']) !!}
                 </div>
+
+                {!! Form::close() !!}
+
+                {!! Form::open(['method'=>'DELETE','action'=>['AdminUsersController@destroy', $user->id, 'class'=>'pull-right']]) !!}
+
+                    <div class="form-group">
+                        {{--   CAN JUST LEAVE IT AS SUBMIT()   THIS SHOWS HOW TO CUSTOMIZE BUTTON AND ADD CLASS TO IT      --}}
+                        {!! Form::submit('Delete User', ['class'=>'btn btn-danger col-sm-6']) !!}
+                    </div>
 
                 {!! Form::close() !!}
 
